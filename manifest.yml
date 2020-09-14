@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: k8s-rust-test
+  name: k8s-rust-test
+spec:
+  replicas: 31
+  selector:
+    matchLabels:
+      app: k8s-rust-test
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: k8s-rust-test
+    spec:
+      containers:
+      - image: jdato/k8s-rust-test
+        name: k8s
+        imagePullPolicy: IfNotPresent
+        resources: {}
+        ports:
+          - containerPort: 8080
+status: {}

@@ -1,0 +1,6 @@
+/.git
+/target
+/ignition
+test1.tar
+.DS_Store
+Cargo.lock
