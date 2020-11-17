@@ -3,9 +3,11 @@ kind: Service
 metadata:
   name: k8s-rust-test-service
 spec:
+  type: NodePort
   selector:
     app: k8s-rust-test
   ports:
     - protocol: TCP
       port: 80
       targetPort: 8080
+      nodePort: 30024
